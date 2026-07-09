@@ -7,14 +7,14 @@ const services = [
     id: "web-development",
     title: "Web Development",
     color: "blue-shade-dark",
-    className: "blue-shade-dark",
+    className: "bg-blue-shade-dark",
   },
   {
     id: "branding",
     title: "Branding",
     color: "blue-shade",
-},
-{
+  },
+  {
     id: "digital-marketing",
     title: "Digital Marketing",
     color: "secondary",
@@ -29,7 +29,7 @@ const services = [
 export function OurServices() {
   return (
     <div className="w-full relative">
-      <div className="absolute -top-100 -left-50 [&>svg]:size-200 opacity-10">
+      <div className="absolute -top-100 -right-50 [&>svg]:size-200 opacity-10">
         {NjilaIllustration}
       </div>
 
