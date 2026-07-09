@@ -8,7 +8,7 @@
   --secondary: #8515c2;
   --blue-shade: #1883e9;
   --blue-shade-dark: #223846;
-  --pink-shade: #FF1493;
+  --pink-shade: #ff1493;
   --font-dm-sans: "DM Sans", sans-serif;
 }
 
@@ -25,6 +25,9 @@
   --color-pink-shade: var(--pink-shade);
 }
 
+html {
+  font-size: 0.875rem;
+}
 body {
   font-family: "Syne", sans-serif;
 }

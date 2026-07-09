@@ -7,6 +7,7 @@ const services = [
     id: "web-development",
     title: "Web Development",
     color: "blue-shade-dark",
+    className: "blue-shade-dark",
   },
   {
     id: "branding",
@@ -28,7 +29,7 @@ const services = [
 export function OurServices() {
   return (
     <div className="w-full relative">
-      <div className="absolute -top-100 -left-50 w-200 h-200 opacity-10 inset-0 flex justify-center items-center">
+      <div className="absolute -top-100 -left-50 [&>svg]:size-200 opacity-10">
         {NjilaIllustration}
       </div>
 

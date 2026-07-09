@@ -68,14 +68,17 @@ export function Hero() {
           <div className="grid grid-cols-2 gap-2">
             <div className="col-span-1 overflow-hidden h-90 rounded-2xl">
               <img
-                src="https://images.pexels.com/photos/6852524/pexels-photo-6852524.jpeg"
+                src="https://images.pexels.com/photos/3230258/pexels-photo-3230258.jpeg"
+                style={{
+                  objectPosition: "center 5%",
+                }}
                 alt=""
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="col-span-1 overflow-hidden h-90 rounded-2xl">
               <img
-                src="https://images.pexels.com/photos/7286023/pexels-photo-7286023.jpeg"
+                src="https://images.pexels.com/photos/35931373/pexels-photo-35931373.jpeg"
                 alt=""
                 className="w-full h-full object-cover"
               />

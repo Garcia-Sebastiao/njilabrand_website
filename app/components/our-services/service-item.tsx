@@ -22,7 +22,7 @@ export function ServiceItem({
     >
       <h2 className="text-4xl pl-8 font-black text-white">{title}</h2>
 
-      <button className="w-16 h-16 group-hover/card:bg-white rounded-full flex items-center justify-center">
+      <button className="w-16 h-16 border-2 border-white group-hover/card:bg-white rounded-full flex items-center justify-center">
         <ArrowRight
           className={`size-10 group-hover:rotate-4 ${isHovered ? `text-${color} -rotate-45` : "text-white"}`}
         />
