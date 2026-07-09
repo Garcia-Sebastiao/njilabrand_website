@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yedika Njila Ye!",
+  title: "Njilabrand - Yedika Njila Ye!",
   description: "Construa o caminho da sua marca",
 };
 
