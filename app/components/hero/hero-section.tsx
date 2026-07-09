@@ -18,82 +18,108 @@ const services = [
 
 export function Hero() {
   return (
-    <div className="w-full pb-10 min-h-[80dvh] overflow-hidden relative bg-secondary">
-      <Header />
+    <div className="w-full">
+      <div className="w-full pb-48 min-h-[80dvh] overflow-hidden relative bg-primary">
+        <Header />
 
-      <div className="mx-auto relative z-10 space-y-12 max-w-6xl mt-10 w-full">
-        <div className="flex relative justify-between items-center gap-x-6 w-full">
-          <div className="flex flex-col gap-y-4">
-            <div className="flex flex-col">
-              <span className="text-3xl font-bold text-white">50+</span>
-              <span className="font-normal text-white">Happy Customers</span>
+        <div className="mx-auto relative z-10 space-y-12 max-w-6xl mt-10 w-full">
+          <div className="flex relative justify-between items-center gap-x-6 w-full">
+            <div className="flex flex-col gap-y-4">
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold text-white">50+</span>
+                <span className="font-normal text-white">Happy Customers</span>
+              </div>
+
+              <div className="w-20 h-px bg-white" />
+
+              <span className="text-white font-normal max-w-64">
+                Our approach is centered around understanding your unique needs
+                and delivering tailored solutions that exceed expectations.
+              </span>
             </div>
 
-            <div className="w-20 h-px bg-white" />
+            <h1 className="text-[6.8rem] leading-none font-black text-white text-center">
+              NJILA <br /> <span>BRAND</span>
+            </h1>
 
-            <span className="text-white font-normal max-w-64">
-              Our approach is centered around understanding your unique needs
-              and delivering tailored solutions that exceed expectations.
-            </span>
+            <div className="flex flex-col gap-y-6">
+              <div className="flex py-2 px-3 mt-6 rounded-full border-2 border-white/70 self-start items-center">
+                {Array.from({ length: 3 }).map((_, index) => (
+                  <div
+                    key={index}
+                    className={`w-14 h-14 rounded-full overflow-hidden border-4 border-white ${index > 0 ? "-ml-4" : ""}`}
+                  >
+                    <img
+                      src="https://images.pexels.com/photos/9467687/pexels-photo-9467687.jpeg"
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              <div className="ml-6">
+                <div className=" [&>svg]:size-16 ml-8 opacity-50">{spark}</div>
+                <div className="[&>svg]:size-10 opacity-50">{spark}</div>
+              </div>
+            </div>
           </div>
 
-          <h1 className="text-[6.8rem] leading-none font-black text-white/90 text-center">
-            NJILA <br /> BRAND
-          </h1>
+          <div className="grid grid-cols-2 gap-2">
+            <div className="col-span-1 overflow-hidden h-90 rounded-2xl">
+              <img
+                src="https://images.pexels.com/photos/6852524/pexels-photo-6852524.jpeg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="col-span-1 overflow-hidden h-90 rounded-2xl">
+              <img
+                src="https://images.pexels.com/photos/7286023/pexels-photo-7286023.jpeg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
 
-          <div className="flex flex-col gap-y-6">
-            <div className="flex py-2 px-3 mt-6 rounded-full border-2 border-white/70 self-start items-center">
-              {Array.from({ length: 3 }).map((_, index) => (
-                <div
-                  key={index}
-                  className={`w-14 h-14 rounded-full overflow-hidden border-4 border-white ${index > 0 ? "-ml-4" : ""}`}
-                >
-                  <img
-                    src="https://images.pexels.com/photos/9467687/pexels-photo-9467687.jpeg"
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
+        <div className="absolute right-0 top-0 rotate-120 scale-140 opacity-15">
+          {svg_lines}
+        </div>
+      </div>
+
+      <div className="w-full relative">
+        <div className="w-[calc(100%+2rem)] absolute bottom-0 h-24 flex items-center justify-center rotate-4 bg-white">
+          <Marquee speed={80}>
+            {services.map((service, index) => (
+              <div key={index} className="flex items-center h-full gap-x-6">
+                <span className="font-black text-[#250638]/80 overflow-hidden pl-10 text-5xl">
+                  {service}
+                </span>
+
+                <div className="[&>svg]:size-10 opacity-50 [&>svg>path]:fill-gray-400/50">
+                  {spark}
                 </div>
-              ))}
-            </div>
-
-            <div className="ml-6">
-              <div className=" [&>svg]:size-16 ml-8 opacity-50">{spark}</div>
-              <div className="[&>svg]:size-10 opacity-50">{spark}</div>
-            </div>
-          </div>
+              </div>
+            ))}
+          </Marquee>
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
-          <div className="col-span-1 overflow-hidden h-90 rounded-2xl">
-            <img
-              src="https://images.pexels.com/photos/6852524/pexels-photo-6852524.jpeg"
-              alt=""
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="col-span-1 overflow-hidden h-90 rounded-2xl">
-            <img
-              src="https://images.pexels.com/photos/7286023/pexels-photo-7286023.jpeg"
-              alt=""
-              className="w-full h-full object-cover"
-            />
-          </div>
+        <div className="w-full absolute bottom-0 h-25 flex items-center justify-center mt-24 -rotate-2 bg-white">
+          <Marquee direction="right" speed={80}>
+            {services.map((service, index) => (
+              <div key={index} className="flex items-center gap-x-6">
+                <span className="font-black text-[#250638]/80 overflow-hidden pl-10 text-5xl">
+                  {service}
+                </span>
+
+                <div className="[&>svg]:size-10 opacity-50 [&>svg>path]:fill-gray-400/50">
+                  {spark}
+                </div>
+              </div>
+            ))}
+          </Marquee>
         </div>
-      </div>
-
-      <div className="absolute right-0 top-0 rotate-120 scale-140 opacity-10">
-        {svg_lines}
-      </div>
-
-      <div className="w-full py-4 mt-12 bg-white">
-        <Marquee >
-          {services.map((service, index) => (
-            <span key={index} className="font-black pl-10 text-3xl">
-              {service}
-            </span>
-          ))}
-        </Marquee>
       </div>
     </div>
   );

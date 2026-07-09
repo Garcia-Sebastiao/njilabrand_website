@@ -4,7 +4,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #fc9c01;
   --secondary: #8515c2;
+  --blue-shade: #1883e9;
+  --blue-shade-dark: #223846;
+  --pink-shade: #FF1493;
   --font-dm-sans: "DM Sans", sans-serif;
 }
 
@@ -14,7 +18,11 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-secondary: var(--secondary);
+  --color-primary: var(--primary);
   --font-dm: var(--font-dm-sans);
+  --color-blue-shade-dark: var(--blue-shade-dark);
+  --color-blue-shade: var(--blue-shade);
+  --color-pink-shade: var(--pink-shade);
 }
 
 body {
