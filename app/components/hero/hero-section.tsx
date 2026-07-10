@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import { svg_lines } from "@/app/assets/svg-lines";
 import { Header } from "./header";
 import { spark } from "@/app/assets/spark";
 import Marquee from "react-fast-marquee";
+import { NjilaIllustration } from "@/app/assets/njila-illustration";
 
 const services = [
   "UX-UI Design",
@@ -86,8 +86,8 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="absolute right-0 top-0 rotate-120 scale-140 opacity-15">
-          {svg_lines}
+        <div className="absolute -top-80 -right-50 [&_svg_*]:fill-white opacity-15">
+          {NjilaIllustration}
         </div>
       </div>
 

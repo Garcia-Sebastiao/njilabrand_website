@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { AboutItem } from "./about-item";
 import { PlayCircle } from "lucide-react";
+import { NjilaIllustration } from "@/app/assets/njila-illustration";
 
 const aboutItems = [
   {
@@ -40,7 +41,11 @@ export function About() {
   const [isOpen, setIsOpen] = useState<string>("experience");
 
   return (
-    <div className="w-full bg-secondary py-24">
+    <div className="w-full relative overflow-hidden bg-secondary py-24">
+      <div className="absolute -top-80 -left-50 [&>svg]:size-250 [&_svg_*]:fill-white opacity-10">
+        {NjilaIllustration}
+      </div>
+
       <div className="w-full flex flex-col gap-y-14 mt-14 mx-auto max-w-6xl">
         <div className="w-full flex gap-x-12 items-center">
           <h2 className="text-6xl text-nowrap font-black text-white/90">

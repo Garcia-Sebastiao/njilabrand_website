@@ -1,3 +1,6 @@
+import { NjilaIllustration } from "@/app/assets/njila-illustration";
+import { teamShape } from "@/app/assets/team-shape";
+
 /* eslint-disable @next/next/no-img-element */
 export function OurTeam() {
   return (
@@ -39,14 +42,24 @@ export function OurTeam() {
                   </div>
 
                   <div
-                    className={`col-span-1 h-80 rounded-3xl overflow-hidden ${i > 0 ? "bg-blue-shade" : "bg-primary"}  ${
+                    className={`col-span-1 flex overflow-hidden  items-center justify-center relative h-80 rounded-3xl   ${
                       reverse ? "order-1" : "order-2"
                     }`}
                   >
+                    <div
+                      className={`w-full h-full flex items-center ${i > 0 ? "[&>svg_*]:fill-primary" : "[&>svg_*]:fill-secondary"}`}
+                    >
+                      {teamShape}
+                    </div>
+
+                    <div className="absolute opacity-30 [&>svg_*]:fill-white [&>svg_*]:stroke-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 [&>svg]:size-100 rotate-45">
+                      {NjilaIllustration}
+                    </div>
+
                     <img
                       src="/images/model-01.png"
                       alt="Person"
-                      className="w-full"
+                      className="w-full absolute top-10  left-0 z-10"
                     />
                   </div>
                 </div>

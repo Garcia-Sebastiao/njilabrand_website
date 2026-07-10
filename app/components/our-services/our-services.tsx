@@ -39,8 +39,11 @@ export function OurServices() {
             Our <span className="text-primary">Services</span>
           </h2>
 
-          <button className="bg-blue-shade text-white flex items-center gap-x-3 px-6 py-4 font-bold rounded-full">
-            Discover more <ArrowRight className="size-6 rotate-3" />
+          <button
+            className={` flex items-center gap-x-3 px-8 py-3 font-semibold rounded-full bg-blue-shade text-white`}
+          >
+            Discover more
+            <ArrowRight className="size-6 -rotate-45 text-white" />
           </button>
         </div>
 

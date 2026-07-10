@@ -1,10 +1,15 @@
+import { NjilaIllustration } from "@/app/assets/njila-illustration";
 import { njila_shield } from "@/app/assets/njila-shield";
 import { ArrowRight } from "lucide-react";
 
 export function Banner() {
   return (
-    <div className="w-full py-24 bg-blue-shade-dark flex items-center justify-center">
-      <div className="flex flex-col items-center gap-y-6">
+    <div className="w-full py-24 bg-primary overflow-hidden relative flex items-center justify-center">
+      <div className="absolute -bottom-260 [&>svg]:size-380 [&_svg_*]:fill-white opacity-15">
+        {NjilaIllustration}
+      </div>
+
+      <div className="flex flex-col relative z-10 items-center gap-y-6">
         <div className="flex flex-col items-center">
           <h2 className="text-8xl text-white/90 font-black">YEDIKA</h2>
 
@@ -26,7 +31,7 @@ export function Banner() {
         </p>
 
         <button className="bg-white mt-4 text-blue-shade-dark flex items-center gap-x-6 px-3 py-2 font-bold rounded-full">
-         <span className="pl-4 text-lg"> Build your Njila!</span>{" "}
+          <span className="pl-4 text-lg"> Build your Njila!</span>{" "}
           <div className="w-12 h-12 rounded-full bg-blue-shade-dark flex items-center justify-center">
             <ArrowRight className="size-7 text-white -rotate-45" />
           </div>
