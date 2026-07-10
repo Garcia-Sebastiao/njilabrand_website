@@ -20,9 +20,9 @@ export function Testimonials() {
         </div>
       </div>
 
-      <Marquee pauseOnHover speed={80}>
+      <Marquee className="h-68! overflow-hidden" pauseOnHover speed={80}>
         {Array.from({ length: 8 }).map((_, index) => (
-          <div key={index} className="w-80 hover:scale-105 transition-all mt-12 mr-4 relative h-54">
+          <div key={index} className="w-80 hover:scale-105 transition-all mr-4 relative h-54">
             <div
               className={`w-full flex h-full items-center justify-center ${index % 2 !== 0 ? "[&>svg_*]:fill-secondary" : ""}`}
             >
