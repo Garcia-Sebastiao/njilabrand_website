@@ -8,7 +8,7 @@ export function Testimonials() {
       <div className="w-full relative flex flex-col gap-y-8 z-10 max-w-6xl mx-auto">
         <div className="w-full flex gap-x-12 items-center">
           <h2 className="text-6xl text-nowrap font-black text-blue-shade-dark">
-            Trusted <span className="text-primary">Clients</span>
+            Trusted <span className="text-blue-shade">Clients</span>
           </h2>
 
           <div className="h-1 bg-blue-shade-dark w-44" />

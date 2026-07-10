@@ -91,7 +91,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="w-full relative">
+      <div className="w-full z-1 relative">
         <div className="w-[calc(100%+2rem)] absolute bottom-0 h-24 flex items-center justify-center rotate-4 bg-white">
           <Marquee speed={80}>
             {services.map((service, index) => (

@@ -40,7 +40,7 @@ export function OurServices() {
           </h2>
 
           <button
-            className={` flex items-center gap-x-3 px-8 py-3 font-semibold rounded-full bg-blue-shade text-white`}
+            className={`transition-all cursor-pointer hover:brightness-90 flex items-center gap-x-3 px-8 py-3 font-semibold rounded-full bg-blue-shade text-white`}
           >
             Discover more
             <ArrowRight className="size-6 -rotate-45 text-white" />

@@ -56,7 +56,7 @@ export function OurProjects() {
               <button
                 onClick={() => setProjectList(item?.id)}
                 key={item?.id}
-                className={` flex items-center gap-x-3 px-8 py-3 font-semibold rounded-full ${item?.id == projectList ? "bg-white/90 text-blue-shade-dark" : "border text-white"}`}
+                className={` flex hover:bg-white hover:text-blue-shade-dark transition-all cursor-pointer items-center gap-x-3 px-8 py-3 font-semibold rounded-full ${item?.id == projectList ? "bg-white/90 text-blue-shade-dark" : "border text-white"}`}
               >
                 {item?.label}
               </button>
@@ -64,10 +64,10 @@ export function OurProjects() {
           </div>
 
           <button
-            className={` flex items-center gap-x-3 px-8 py-3 font-semibold rounded-full border text-white`}
+            className={` flex hover:bg-white group hover:text-blue-shade-dark transition-all cursor-pointer items-center gap-x-3 px-8 py-3 font-semibold rounded-full border text-white`}
           >
             Discover more
-            <ArrowRight className="size-6 -rotate-45 text-white" />
+            <ArrowRight className="size-6 group-hover:text-blue-shade-dark transition-all -rotate-45 text-white" />
           </button>
         </div>
 

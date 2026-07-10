@@ -41,7 +41,7 @@ export function About() {
   const [isOpen, setIsOpen] = useState<string>("experience");
 
   return (
-    <div className="w-full relative overflow-hidden bg-secondary py-24">
+    <div className="w-full relative overflow-hidden bg-secondary pt-10 pb-24">
       <div className="absolute -top-80 -left-50 [&>svg]:size-250 [&_svg_*]:fill-white opacity-10">
         {NjilaIllustration}
       </div>
@@ -63,7 +63,7 @@ export function About() {
         </div>
 
         <div className="w-full flex gap-x-3">
-          <div className="flex-1 relative rounded-4xl min-w-140 overflow-hidden bg-gray-100">
+          <div className="flex-1 max-w-240 h-148 relative rounded-4xl min-w-140 overflow-hidden bg-gray-100">
             <img
               src="https://images.pexels.com/photos/5439476/pexels-photo-5439476.jpeg"
               alt="Team"
