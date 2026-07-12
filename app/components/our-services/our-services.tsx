@@ -33,13 +33,13 @@ export function OurServices() {
         {NjilaIllustration}
       </div>
 
-      <div className="w-full relative flex flex-col gap-y-10 lg:gap-y-20 z-1 max-w-6xl mx-auto">
-        <div className="flex w-full justify-between items-start lg:items-center gap-x-12">
-          <h2 className="text-4xl lg:text-6xl text-nowrap font-black text-secondary">
+      <div className="w-full relative flex flex-col items-center gap-y-10 lg:gap-y-20 z-1 max-w-6xl mx-auto">
+        <div className="flex w-full justify-between flex-col lg:flex-row items-center gap-x-12">
+          <h2 className="text-4xl lg:text-6xl text-center text-nowrap font-black text-secondary">
             Our <span className="text-primary">Services</span>
           </h2>
 
-          <button
+          <button 
             className={`transition-all cursor-pointer hover:brightness-90 hidden lg:flex items-center gap-x-3 px-8 py-3 font-semibold rounded-full bg-blue-shade text-white`}
           >
             Discover more

@@ -1,19 +1,46 @@
 "use client";
 
-import { useRef } from "react";
+import { Fragment, useRef, useState } from "react";
 import Link from "next/link";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { MenuIcon } from "lucide-react";
 import { njila_shield } from "@/app/assets/njila-shield";
+import { Menu } from "./menu";
+
+gsap.registerPlugin(ScrollTrigger);
+
+export const menuItems = [
+  {
+    id: "home",
+    label: "Home",
+    href: "#",
+  },
+  {
+    id: "about",
+    label: "About",
+    href: "#",
+  },
+  {
+    id: "portfolio",
+    label: "Portfolio",
+    href: "#",
+  },
+];
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
+  const floatingHeaderRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     const header = headerRef.current;
+    const floatingHeader = floatingHeaderRef.current;
 
-    if (!header) return;
+    if (!header || !floatingHeader) return;
 
+    // Header inicial
     gsap.fromTo(
       header,
       {
@@ -27,38 +54,96 @@ export function Header() {
         ease: "power3.out",
       },
     );
+
+    // Estado inicial do floating header
+    gsap.set(floatingHeader, {
+      y: -80,
+      opacity: 0,
+      pointerEvents: "none",
+    });
+
+    ScrollTrigger.create({
+      start: 80,
+
+      onEnter: () => {
+        gsap.to(floatingHeader, {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          ease: "power3.out",
+          pointerEvents: "auto",
+        });
+      },
+
+      onLeaveBack: () => {
+        gsap.to(floatingHeader, {
+          y: -80,
+          opacity: 0,
+          duration: 0.4,
+          ease: "power3.in",
+          pointerEvents: "none",
+        });
+      },
+    });
   }, []);
 
   return (
-    <header
-      ref={headerRef}
-      className="w-full relative z-999! top-0 px-4 left-0 flex py-6 items-center transition-colors duration-300"
-    >
-      <nav className="w-full flex items-center justify-between max-w-6xl mx-auto">
-        <div className="p-1 rounded-full bg-white">
-          <div className="w-12 h-12 flex items-center justify-center">
+    <Fragment>
+      {/* <Menu isOpen={isOpen} onClose={() => setIsOpen(false)} /> */}
+
+      {/* Header principal */}
+      <header
+        ref={headerRef}
+        className="relative top-0 left-0 z-10 flex w-full items-center px-4 py-6"
+      >
+        <nav className="mx-auto flex w-full max-w-6xl items-center justify-between">
+          <div className="rounded-full bg-white p-1">
+            <div className="flex h-12 w-12 items-center justify-center">
+              {njila_shield}
+            </div>
+          </div>
+
+          <ul className="hidden items-center gap-x-16 pl-32 lg:flex">
+            {menuItems.map((item) => (
+              <Link
+                key={item.id}
+                href={item.href}
+                className="text-sm font-semibold text-white"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </ul>
+
+          <button type="button" className="lg:hidden">
+            <MenuIcon className="size-8 text-white" />
+          </button>
+
+          <button className="hidden cursor-pointer rounded-full bg-white px-8 py-2 text-sm font-bold transition-all hover:brightness-90 lg:flex">
+            Contact-us
+          </button>
+        </nav>
+      </header>
+
+      {/* Floating Header */}
+      <div
+        ref={floatingHeaderRef}
+        className="fixed left-0 top-10 z-999! flex w-full items-center justify-between px-4 lg:px-16"
+      >
+        <div className="rounded-full bg-white p-1">
+          <div className="flex h-12 w-12 items-center justify-center">
             {njila_shield}
           </div>
         </div>
 
-        <ul className="hidden lg:flex  items-center pl-32 gap-x-16">
-          <Link href="#" className="text-white text-sm font-semibold">
-            Home
-          </Link>
-
-          <Link href="#" className="text-white text-sm font-semibold">
-            About
-          </Link>
-
-          <Link href="#" className="text-white text-sm font-semibold">
-            Contact
-          </Link>
-        </ul>
-
-        <button className="bg-white transition-all hover:brightness-90 cursor-pointer text-sm px-8 py-2 font-bold rounded-full">
-          Contact-us
+        <button
+          onClick={() => setIsOpen(true)}
+          type="button"
+          className="cursor-pointer border-4 border-white bg-secondary px-6 py-2"
+        >
+          <MenuIcon className="size-8 text-white" />
         </button>
-      </nav>
-    </header>
+      </div>
+    </Fragment>
   );
 }
