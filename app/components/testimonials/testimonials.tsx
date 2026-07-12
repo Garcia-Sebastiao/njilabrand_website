@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 export function Testimonials() {
   return (
     <div className="w-full relative space-y-10">
-      <div className="w-full relative flex flex-col gap-y-8 z-10 max-w-6xl mx-auto">
+      <div className="w-full relative flex flex-col gap-y-8 z-1 max-w-6xl mx-auto">
         <div className="w-full flex gap-x-12 items-center">
           <h2 className="text-6xl text-nowrap font-black text-blue-shade-dark">
             Trusted <span className="text-blue-shade">Clients</span>

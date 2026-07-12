@@ -9,7 +9,7 @@ export function Banner() {
         {NjilaIllustration}
       </div>
 
-      <div className="flex flex-col relative z-10 items-center gap-y-6">
+      <div className="flex flex-col relative z-1 items-center gap-y-6">
         <div className="flex flex-col items-center">
           <h2 className="text-8xl text-white/90 font-black">YEDIKA</h2>
 
@@ -18,7 +18,7 @@ export function Banner() {
               NJILA <span className="">YE</span>
             </h2>
 
-            <div className="p-1 rounded-full bg-white/90">
+            <div className="p-1 rounded-full  bg-white/90">
               <div className="w-28 h-28  flex items-center justify-center">
                 {njila_shield}
               </div>

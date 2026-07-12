@@ -36,7 +36,7 @@ export function OurProjects() {
         {NjilaIllustration}
       </div>
 
-      <div className="w-full relative flex flex-col gap-y-8 z-10 max-w-6xl mx-auto">
+      <div className="w-full relative flex flex-col gap-y-8 z-1 max-w-6xl mx-auto">
         <div className="w-full flex gap-x-12 items-center">
           <h2 className="text-6xl text-nowrap font-black text-white/90">
             Our Projects
@@ -75,7 +75,7 @@ export function OurProjects() {
           {gallery?.map((item, index) => (
             <div
               key={index}
-              className="col-span-1 overflow-hidden h-120 rounded-[3.5rem]"
+              className="col-span-1 group cursor-pointer overflow-hidden h-120 rounded-[3.5rem]"
             >
               <img
                 src={item}
@@ -83,7 +83,7 @@ export function OurProjects() {
                   objectPosition: "center 5%",
                 }}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-full h-full group-hover:scale-110 transition-all duration-700 object-cover"
               />
             </div>
           ))}

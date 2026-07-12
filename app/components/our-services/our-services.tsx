@@ -33,7 +33,7 @@ export function OurServices() {
         {NjilaIllustration}
       </div>
 
-      <div className="w-full relative flex flex-col gap-y-20 z-10 max-w-6xl mx-auto">
+      <div className="w-full relative flex flex-col gap-y-20 z-1 max-w-6xl mx-auto">
         <div className="flex w-full justify-between items-center gap-x-12">
           <h2 className="text-6xl text-nowrap font-black text-secondary">
             Our <span className="text-primary">Services</span>

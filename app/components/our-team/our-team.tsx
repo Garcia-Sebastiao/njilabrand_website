@@ -42,7 +42,7 @@ export function OurTeam() {
                   </div>
 
                   <div
-                    className={`col-span-1 flex overflow-hidden  items-center justify-center relative h-80 rounded-3xl   ${
+                    className={`col-span-1 group flex overflow-hidden  items-center justify-center relative h-80 rounded-3xl   ${
                       reverse ? "order-1" : "order-2"
                     }`}
                   >
@@ -52,14 +52,14 @@ export function OurTeam() {
                       {teamShape}
                     </div>
 
-                    <div className="absolute opacity-30 [&>svg_*]:fill-white [&>svg_*]:stroke-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 [&>svg]:size-100 rotate-45">
+                    <div className="absolute opacity-30 group-hover:animate-spin animate-none duration-1000! [&>svg_*]:fill-white [&>svg_*]:stroke-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 [&>svg]:size-100 rotate-45">
                       {NjilaIllustration}
                     </div>
 
                     <img
                       src="/images/model-01.png"
                       alt="Person"
-                      className="w-full absolute top-10  left-0 z-10"
+                      className="w-full absolute group-hover:scale-110 transition-all duration-500 top-10  left-0 z-1"
                     />
                   </div>
                 </div>
