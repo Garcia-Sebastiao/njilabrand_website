@@ -35,7 +35,7 @@ export function AboutItem({
           <motion.h2
             layout
             animate={{
-              fontSize: isOpen ? "3.75rem" : "2.25rem", // 60px / 36px
+              fontSize: isOpen ? "3.75rem" : "2.25rem",
             }}
             transition={{
               duration: 0.35,

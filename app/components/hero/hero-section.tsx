@@ -22,23 +22,23 @@ export function Hero() {
       <div className="w-full pb-48 overflow-hidden relative bg-primary">
         <Header />
 
-        <div className="mx-auto relative z-10 space-y-12 max-w-6xl mt-10 w-full">
-          <div className="flex relative justify-between items-center gap-x-6 w-full">
-            <div className="flex flex-col gap-y-4">
-              <div className="flex flex-col">
+        <div className="mx-auto relative z-10 px-4 space-y-12 max-w-6xl mt-10 w-full">
+          <div className="flex flex-col gap-y-6 lg:flex-row relative justify-between items-center gap-x-6 w-full">
+            <div className="flex flex-col items-center lg:items-start gap-y-4">
+              <div className="flex flex-col items-center lg:items-start">
                 <span className="text-3xl font-bold text-white">50+</span>
                 <span className="font-normal text-white">Happy Customers</span>
               </div>
 
               <div className="w-20 h-px bg-white" />
 
-              <span className="text-white font-normal max-w-64">
+              <span className="text-white text-center lg:text-left font-normal max-w-64">
                 Our approach is centered around understanding your unique needs
                 and delivering tailored solutions that exceed expectations.
               </span>
             </div>
 
-            <h1 className="text-[6.8rem] leading-none font-black text-white text-center">
+            <h1 className="text-6xl lg:text-[6.8rem] leading-none font-black text-white text-center">
               NJILA <br /> <span>BRAND</span>
             </h1>
 
@@ -65,7 +65,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div className="col-span-1 overflow-hidden h-90 rounded-2xl">
               <img
                 src="https://images.pexels.com/photos/3230258/pexels-photo-3230258.jpeg"
@@ -76,7 +76,7 @@ export function Hero() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="col-span-1 overflow-hidden h-90 rounded-2xl">
+            <div className="col-span-1 hidden md:block overflow-hidden h-90 rounded-2xl">
               <img
                 src="https://images.pexels.com/photos/35931373/pexels-photo-35931373.jpeg"
                 alt=""
@@ -92,11 +92,11 @@ export function Hero() {
       </div>
 
       <div className="w-full z-1 relative">
-        <div className="w-[calc(100%+2rem)] absolute bottom-0 h-24 flex items-center justify-center rotate-4 bg-white">
+        <div className="w-[calc(100%+2rem)] absolute bottom-0 h-18 lg:h-24 flex items-center justify-center rotate-4 bg-white">
           <Marquee speed={80}>
             {services.map((service, index) => (
               <div key={index} className="flex items-center h-full gap-x-6">
-                <span className="font-black text-[#250638]/80 overflow-hidden pl-10 text-5xl">
+                <span className="font-black text-[#250638]/80 overflow-hidden pl-10 text-2xl lg:text-5xl">
                   {service}
                 </span>
 
@@ -108,11 +108,11 @@ export function Hero() {
           </Marquee>
         </div>
 
-        <div className="w-full absolute bottom-0 h-25 flex items-center justify-center mt-24 -rotate-2 bg-white">
+        <div className="w-[calc(100%+300px)] lg:w-full -left-10 lg:left-0 absolute bottom-0 h-18 lg:h-24 flex items-center justify-center mt-24 -rotate-8 md:-rotate-2 bg-white">
           <Marquee direction="right" speed={80}>
             {services.map((service, index) => (
               <div key={index} className="flex items-center gap-x-6">
-                <span className="font-black text-[#250638]/80 overflow-hidden pl-10 text-5xl">
+                <span className="font-black text-[#250638]/80 overflow-hidden pl-10 text-2xl lg:text-5xl">
                   {service}
                 </span>
 

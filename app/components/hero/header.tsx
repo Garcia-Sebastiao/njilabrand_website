@@ -32,7 +32,7 @@ export function Header() {
   return (
     <header
       ref={headerRef}
-      className="w-full relative z-999! top-0 left-0 flex py-6 items-center transition-colors duration-300"
+      className="w-full relative z-999! top-0 px-4 left-0 flex py-6 items-center transition-colors duration-300"
     >
       <nav className="w-full flex items-center justify-between max-w-6xl mx-auto">
         <div className="p-1 rounded-full bg-white">
@@ -41,7 +41,7 @@ export function Header() {
           </div>
         </div>
 
-        <ul className="flex items-center pl-32 gap-x-16">
+        <ul className="hidden lg:flex  items-center pl-32 gap-x-16">
           <Link href="#" className="text-white text-sm font-semibold">
             Home
           </Link>

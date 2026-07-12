@@ -4,29 +4,37 @@ import { ArrowRight } from "lucide-react";
 
 export function Banner() {
   return (
-    <div className="w-full py-24 bg-primary overflow-hidden relative flex items-center justify-center">
+    <div className="w-full py-16 lg:py-24 px-4 bg-primary overflow-hidden relative flex items-center justify-center">
       <div className="absolute -bottom-260 [&>svg]:size-380 [&_svg_*]:fill-white opacity-15">
         {NjilaIllustration}
       </div>
 
       <div className="flex flex-col relative z-1 items-center gap-y-6">
         <div className="flex flex-col items-center">
-          <h2 className="text-8xl text-white/90 font-black">YEDIKA</h2>
+          <div className="p-1 rounded-full mb-10 lg:hidden flex  bg-white/90">
+            <div className="w-28 h-28 flex items-center justify-center">
+              {njila_shield}
+            </div>
+          </div>
+
+          <h2 className="text-5xl lg:text-8xl text-white/90 font-black">
+            YEDIKA
+          </h2>
 
           <div className="flex items-center gap-x-8">
-            <h2 className="text-8xl text-white/90 font-black">
+            <h2 className="text-5xl lg:text-8xl text-white/90 font-black">
               NJILA <span className="">YE</span>
             </h2>
 
-            <div className="p-1 rounded-full  bg-white/90">
-              <div className="w-28 h-28  flex items-center justify-center">
+            <div className="p-1 rounded-full hidden lg:flex  bg-white/90">
+              <div className="w-28 h-28 flex items-center justify-center">
                 {njila_shield}
               </div>
             </div>
           </div>
         </div>
 
-        <p className="text-white/80 text-lg">
+        <p className="text-white/80 text-lg text-center">
           Start you journey now with Njilabrand and make your life easy.
         </p>
 

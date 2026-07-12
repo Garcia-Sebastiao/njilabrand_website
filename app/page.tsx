@@ -10,7 +10,7 @@ import { Testimonials } from "./components/testimonials/testimonials";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       <div className="w-full z-10 relative bg-secondary">
         <Hero />
         <About />

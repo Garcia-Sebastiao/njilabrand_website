@@ -31,14 +31,14 @@ export function OurProjects() {
   const [projectList, setProjectList] = useState("design");
 
   return (
-    <div className="w-full bg-blue-shade-dark overflow-hidden py-24 relative">
+    <div className="w-full px-4 bg-blue-shade-dark overflow-hidden py-16 lg:py-24 relative">
       <div className="absolute -top-50 -left-50 [&>svg]:size-280 [&_svg_*]:fill-white opacity-10">
         {NjilaIllustration}
       </div>
 
       <div className="w-full relative flex flex-col gap-y-8 z-1 max-w-6xl mx-auto">
-        <div className="w-full flex gap-x-12 items-center">
-          <h2 className="text-6xl text-nowrap font-black text-white/90">
+        <div className="w-full flex flex-col lg:flex-row gap-y-6 gap-x-12 items-start lg:items-center">
+          <h2 className="text-4xl lg:text-6xl text-nowrap font-black text-white/90">
             Our Projects
           </h2>
 
@@ -50,8 +50,8 @@ export function OurProjects() {
           </p>
         </div>
 
-        <div className="flex w-full items-center justify-between">
-          <div className="flex items-center">
+        <div className="flex w-full items-center lg:justify-between">
+          <div className="flex items-center gap-2 flex-wrap lg:flex-nowrap lg:gap-0">
             {options?.map((item) => (
               <button
                 onClick={() => setProjectList(item?.id)}
@@ -61,21 +61,28 @@ export function OurProjects() {
                 {item?.label}
               </button>
             ))}
+
+            <button
+            className={` flex lg:hidden hover:bg-white group hover:text-blue-shade-dark transition-all cursor-pointer items-center gap-x-3 px-8 py-3 font-semibold rounded-full border text-white`}
+          >
+            Discover more
+            <ArrowRight className="size-6 group-hover:text-blue-shade-dark transition-all -rotate-45 text-white" />
+          </button>
           </div>
 
           <button
-            className={` flex hover:bg-white group hover:text-blue-shade-dark transition-all cursor-pointer items-center gap-x-3 px-8 py-3 font-semibold rounded-full border text-white`}
+            className={`hidden lg:flex hover:bg-white group hover:text-blue-shade-dark transition-all cursor-pointer items-center gap-x-3 px-8 py-3 font-semibold rounded-full border text-white`}
           >
             Discover more
             <ArrowRight className="size-6 group-hover:text-blue-shade-dark transition-all -rotate-45 text-white" />
           </button>
         </div>
 
-        <div className="grid mt-10 grid-cols-2 gap-3">
+        <div className="grid mt-10 grid-cols-1 md:grid-cols-2 gap-3">
           {gallery?.map((item, index) => (
             <div
               key={index}
-              className="col-span-1 group cursor-pointer overflow-hidden h-120 rounded-[3.5rem]"
+              className="col-span-1 group cursor-pointer overflow-hidden h-100 md:h-120 rounded-[3.5rem]"
             >
               <img
                 src={item}

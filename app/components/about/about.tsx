@@ -41,14 +41,14 @@ export function About() {
   const [isOpen, setIsOpen] = useState<string>("experience");
 
   return (
-    <div className="w-full relative overflow-hidden bg-secondary pt-10 pb-24">
+    <div className="w-full px-4 relative overflow-hidden bg-secondary pt-10 pb-24">
       <div className="absolute -top-80 -left-50 [&>svg]:size-250 [&_svg_*]:fill-white opacity-10">
         {NjilaIllustration}
       </div>
 
-      <div className="w-full flex flex-col gap-y-14 mt-14 mx-auto max-w-6xl">
-        <div className="w-full flex gap-x-12 items-center">
-          <h2 className="text-6xl text-nowrap font-black text-white/90">
+      <div className="w-full relative z-1 flex flex-col gap-y-14 mt-14 md:mt-24 lg:mt-14 mx-auto max-w-6xl">
+        <div className="w-full flex flex-col lg:flex-row gap-x-12 items-start gap-y-6 lg:items-center">
+          <h2 className="text-4xl lg:text-6xl text-nowrap font-black text-white/90">
             About Us
           </h2>
 
@@ -62,8 +62,8 @@ export function About() {
           </p>
         </div>
 
-        <div className="w-full flex gap-x-3">
-          <div className="flex-1 max-w-240 h-148 relative rounded-4xl min-w-140 overflow-hidden bg-gray-100">
+        <div className="w-full flex-col-reverse lg:flex-row gap-y-6 flex gap-x-3">
+          <div className="flex-1 max-w-240 h-148 relative rounded-4xl lg:min-w-140 overflow-hidden bg-gray-100">
             <img
               src="https://images.pexels.com/photos/5439476/pexels-photo-5439476.jpeg"
               alt="Team"

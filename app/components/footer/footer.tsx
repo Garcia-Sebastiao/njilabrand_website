@@ -9,11 +9,11 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="w-full flex flex-col gap-y-4 mt-20  max-w-6xl mx-auto">
-      <div className="flex w-full items-center justify-between">
+    <footer className="w-full flex flex-col gap-y-4 mt-10 lg:mt-20  max-w-6xl mx-auto">
+      <div className="flex px-4 w-full items-center justify-between">
         <div className="[&>svg]:size-44">{NjilaLogo}</div>
 
-        <ul className="flex items-center pl-32 gap-x-16">
+        <ul className="hidden lg:flex items-center pl-32 gap-x-16">
           <Link href="#" className="text-blue-shade-dark font-semibold">
             Home
           </Link>
@@ -35,7 +35,7 @@ export function Footer() {
 
       <div className="w-full bg-blue-shade-dark h-px border-b" />
 
-      <div className="w-full py-6 flex items-center justify-between">
+      <div className="w-full px-4 py-6 flex items-center justify-between">
         <span className="text-blue-shade-dark text-lg font-semibold">
           ©{new Date().getFullYear().toString()} Njilabrand
         </span>
