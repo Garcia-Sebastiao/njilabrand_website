@@ -42,7 +42,6 @@ export const menuItems = [
     label: "Testimonials",
     href: "#testimonials",
   },
-  
 ];
 
 export function Header() {
@@ -107,7 +106,6 @@ export function Header() {
     <Fragment>
       <Menu isOpen={isOpen} onClose={() => setIsOpen(false)} />
 
-      {/* Header principal */}
       <header
         ref={headerRef}
         className="relative top-0 left-0 z-10 flex w-full items-center px-4 py-6"
@@ -131,7 +129,11 @@ export function Header() {
             ))}
           </ul>
 
-          <button type="button" className="lg:hidden">
+          <button
+            onClick={() => setIsOpen(true)}
+            type="button"
+            className="lg:hidden"
+          >
             <MenuIcon className="size-8 text-white" />
           </button>
 
