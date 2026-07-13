@@ -157,9 +157,9 @@ export function Header() {
         <button
           onClick={() => setIsOpen(true)}
           type="button"
-          className="cursor-pointer border-4 border-white bg-secondary px-6 py-2"
+          className="cursor-pointer border-4 border-white bg-secondary px-3 lg:px-6 py-2"
         >
-          <MenuIcon className="size-8 text-white" />
+          <MenuIcon className="size-6 lg:size-8 text-white" />
         </button>
       </div>
     </Fragment>
