@@ -18,7 +18,7 @@ const services = [
 
 export function Hero() {
   return (
-    <div className="w-full">
+    <div id="home" className="w-full">
       <div className="w-full pb-48 overflow-hidden relative bg-primary">
         <Header />
 

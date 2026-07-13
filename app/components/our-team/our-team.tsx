@@ -4,7 +4,7 @@ import { teamShape } from "@/app/assets/team-shape";
 /* eslint-disable @next/next/no-img-element */
 export function OurTeam() {
   return (
-    <div className="w-full px-4 flex flex-col items-start gap-y-10 lg:gap-y-20 mx-auto max-w-6xl">
+    <div id="team" className="w-full px-4 flex flex-col items-start gap-y-10 lg:gap-y-20 mx-auto max-w-6xl">
       <div className="w-full flex flex-col lg:flex-row gap-y-6 lg:gap-x-12 items-start lg:items-center">
         <h2 className="text-4xl lg:text-6xl text-nowrap font-black text-primary">
           Our <span className="text-secondary">Team</span>
@@ -79,7 +79,7 @@ export function OurTeam() {
                       <img
                         src="/images/model-01.png"
                         alt="Person"
-                        className="absolute top-10 left-0 z-10 w-full transition-transform duration-500 group-hover:scale-110"
+                        className="absolute top-10 left-0 z-1 w-full transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
                   </div>

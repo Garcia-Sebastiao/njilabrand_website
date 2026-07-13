@@ -28,7 +28,7 @@ const services = [
 
 export function OurServices() {
   return (
-    <div className="w-full relative px-4">
+    <div id="services" className="w-full relative px-4">
       <div className="absolute -top-100 -right-50 [&>svg]:size-200 opacity-10">
         {NjilaIllustration}
       </div>

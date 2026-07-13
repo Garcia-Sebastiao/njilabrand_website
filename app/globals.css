@@ -26,6 +26,7 @@
 }
 html {
   font-size: 0.875rem;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Syne", sans-serif;

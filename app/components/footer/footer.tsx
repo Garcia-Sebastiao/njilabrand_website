@@ -1,3 +1,4 @@
+"use client";
 import { NjilaLogo } from "@/app/assets/njilabrand-logo";
 import {
   AiFillInstagram,
@@ -6,6 +7,7 @@ import {
   AiFillBehanceSquare,
 } from "react-icons/ai";
 import Link from "next/link";
+import { menuItems } from "../hero/header";
 
 export function Footer() {
   return (
@@ -14,15 +16,15 @@ export function Footer() {
         <div className="[&>svg]:size-44">{NjilaLogo}</div>
 
         <ul className="hidden lg:flex items-center pl-32 gap-x-16">
-          <Link href="#" className="text-blue-shade-dark font-semibold">
-            Home
-          </Link>
-          <Link href="#" className="text-blue-shade-dark font-semibold">
-            About
-          </Link>
-          <Link href="#" className="text-blue-shade-dark font-semibold">
-            Contact
-          </Link>
+          {menuItems.slice(0, 3).map((item) => (
+            <Link
+              key={item?.id}
+              href={item?.href}
+              className="text-blue-shade-dark cursor-pointer font-semibold"
+            >
+              {item?.label}
+            </Link>
+          ))}
         </ul>
 
         <div className="flex items-center gap-x-4">

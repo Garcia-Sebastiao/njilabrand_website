@@ -41,7 +41,7 @@ export function About() {
   const [isOpen, setIsOpen] = useState<string>("experience");
 
   return (
-    <div className="w-full px-4 relative overflow-hidden bg-secondary pt-10 pb-24">
+    <div id="about" className="w-full px-4 relative overflow-hidden bg-secondary pt-10 pb-24">
       <div className="absolute -top-80 -left-50 [&>svg]:size-250 [&_svg_*]:fill-white opacity-10">
         {NjilaIllustration}
       </div>

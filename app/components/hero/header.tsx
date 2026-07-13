@@ -15,18 +15,34 @@ export const menuItems = [
   {
     id: "home",
     label: "Home",
-    href: "#",
+    href: "#home",
   },
   {
     id: "about",
     label: "About",
-    href: "#",
+    href: "#about",
+  },
+  {
+    id: "services",
+    label: "Services",
+    href: "#services",
   },
   {
     id: "portfolio",
     label: "Portfolio",
-    href: "#",
+    href: "#portfolio",
   },
+  {
+    id: "team",
+    label: "Team",
+    href: "#team",
+  },
+  {
+    id: "testimonials",
+    label: "Testimonials",
+    href: "#testimonials",
+  },
+  
 ];
 
 export function Header() {
@@ -89,7 +105,7 @@ export function Header() {
 
   return (
     <Fragment>
-      {/* <Menu isOpen={isOpen} onClose={() => setIsOpen(false)} /> */}
+      <Menu isOpen={isOpen} onClose={() => setIsOpen(false)} />
 
       {/* Header principal */}
       <header
@@ -128,7 +144,7 @@ export function Header() {
       {/* Floating Header */}
       <div
         ref={floatingHeaderRef}
-        className="fixed left-0 top-10 z-999! flex w-full items-center justify-between px-4 lg:px-16"
+        className="fixed left-0 top-10 z-2! flex w-full items-center justify-between px-4 lg:px-16"
       >
         <div className="rounded-full bg-white p-1">
           <div className="flex h-12 w-12 items-center justify-center">

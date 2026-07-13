@@ -31,7 +31,7 @@ export function OurProjects() {
   const [projectList, setProjectList] = useState("design");
 
   return (
-    <div className="w-full px-4 bg-blue-shade-dark overflow-hidden py-16 lg:py-24 relative">
+    <div id="portfolio" className="w-full px-4 bg-blue-shade-dark overflow-hidden py-16 lg:py-24 relative">
       <div className="absolute -top-50 -left-50 [&>svg]:size-280 [&_svg_*]:fill-white opacity-10">
         {NjilaIllustration}
       </div>
