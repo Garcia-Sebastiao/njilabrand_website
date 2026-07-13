@@ -22,7 +22,7 @@ export function Hero() {
       <div className="w-full pb-48 overflow-hidden relative bg-primary">
         <Header />
 
-        <div className="mx-auto relative z-10 px-4 space-y-12 max-w-6xl mt-10 w-full">
+        <div className="mx-auto relative z-1 px-4 space-y-12 max-w-6xl mt-10 w-full">
           <div className="flex flex-col gap-y-6 lg:flex-row relative justify-between items-center gap-x-6 w-full">
             <div className="flex flex-col items-center lg:items-start gap-y-4">
               <div className="flex flex-col items-center lg:items-start">
