@@ -34,7 +34,7 @@ export function Menu({
         </div>
 
         <div className="rounded-full bg-white p-1">
-          <div className="flex h-18 w-18 items-center justify-center">
+          <div className="flex w-12 lg:h-18 h-12 lg:w-18 items-center justify-center">
             {njila_shield}
           </div>
         </div>
@@ -47,7 +47,7 @@ export function Menu({
               key={item.id}
               onClick={onClose}
               href={item.href}
-              className="cursor-pointer text-4xl font-bold text-white transition-all hover:underline"
+              className="cursor-pointer text-2xl lg:text-4xl font-bold text-white transition-all hover:underline"
             >
               {item.label}
             </Link>
@@ -56,7 +56,7 @@ export function Menu({
           <Link
             href="#"
             onClick={onClose}
-            className="pt-10 text-2xl font-medium text-white underline lg:text-4xl"
+            className="pt-10 text-xl font-medium text-white underline lg:text-4xl"
           >
             Subscribe in our newslatter
           </Link>
